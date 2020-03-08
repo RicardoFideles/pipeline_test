@@ -25,7 +25,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deployng...'
-                sh 'cd ~'
+                sh 'ssh root@157.245.250.114'
                 sh 'cd /var/www/html/construcao_api/'
                 sh 'touch teste.html'
             }

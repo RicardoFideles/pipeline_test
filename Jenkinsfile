@@ -22,5 +22,13 @@ pipeline {
                 sh 'npm test'
             }
         }
+        stage('Deploy') {
+            steps {
+                echo 'Deployng...'
+                sh 'cd ~'
+                sh 'cd /var/www/html/construcao_api/'
+                sh 'touch teste.html'
+            }
+        }
     }
 }

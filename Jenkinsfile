@@ -26,10 +26,7 @@ pipeline {
             steps {
                 echo 'Deployng...'
                 sh '''
-                    ssh root@157.245.250.114
-                    cd /var/www/html/construcao_api/
-                    ls -lah
-                    touch teste.html
+                    ./deploy
                 '''
             }
         }

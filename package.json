@@ -8,7 +8,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "posttest": "npm run lint && npm audit"
+    "test": "export NODE_ENV=test; jest --coverage --collectCoverageFrom=./server/**/**/.js --reporters default jest-stare "
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -23,7 +23,13 @@
   },
   "devDependencies": {
     "eslint": "^3.17.1",
-    "eslint-config-loopback": "^8.0.0"
+    "eslint-config-loopback": "^8.0.0",
+    "jest": "24.9.0",
+    "jest-html-reporter": "2.6.0",
+    "jest-stare": "1.18.1"
+  },
+  "jest-stare": {
+    "coverageLink": "../coverage/lcov-report/index.html"
   },
   "repository": {
     "type": "",
